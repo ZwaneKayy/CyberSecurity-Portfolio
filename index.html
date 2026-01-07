@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+
+  <!-- Security Headers -->
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; img-src 'self' data:; media-src 'self'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src https://fonts.gstatic.com; script-src 'self' 'unsafe-inline'; form-action 'self' https://formspree.io;">
+  <meta http-equiv="X-Content-Type-Options" content="nosniff">
+  <meta http-equiv="X-Frame-Options" content="DENY">
+  <meta http-equiv="Referrer-Policy" content="strict-origin-when-cross-origin">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Cybersecurity Portfolio</title>
+
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;600&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: 'Inter', sans-serif;
+      background: #0b0f14;
+      color: #e6e6e6;
+      line-height: 1.6;
+    }
+    header {
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      background: radial-gradient(circle at top, #0f2027, #000);
+    }
+    header img {
+      width: 160px;
+      height: 160px;
+      border-radius: 50%;
+      border: 3px solid #00ffcc;
+      margin-bottom: 20px;
+    }
+    h1 {
+      font-family: 'Orbitron', sans-serif;
+      color: #00ffcc;
+      font-size: 2.2rem;
+    }
+    h2 {
+      margin-top: 40px;
+      color: #00ffcc;
+      font-family: 'Orbitron', sans-serif;
+    }
+    section {
+      max-width: 900px;
+      margin: auto;
+      padding: 40px 20px;
+    }
+    ul {
+      list-style: none;
+      padding-left: 0;
+    }
+    ul li::before {
+      content: "▸ ";
+      color: #00ffcc;
+    }
+    a {
+      color: #00ffcc;
+      text-decoration: none;
+    }
+    .links a {
+      margin-right: 15px;
+    }
+    footer {
+      text-align: center;
+      padding: 20px;
+      border-top: 1px solid #00ffcc;
+    }
+    .glitch {
+      animation: glitch 1.5s infinite;
+    }
+    @keyframes glitch {
+      0% { text-shadow: 2px 2px #00ffcc; }
+      50% { text-shadow: -2px -2px #ff004c; }
+      100% { text-shadow: 2px 2px #00ffcc; }
+    }
+    .music-btn {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      background: #00ffcc;
+      color: #000;
+      border: none;
+      padding: 10px 15px;
+      border-radius: 20px;
+      cursor: pointer;
+      font-weight: bold;
+    }
+    input, textarea {
+      width: 100%;
+      padding: 12px;
+      margin-top: 10px;
+      background: #111;
+      border: 1px solid #00ffcc;
+      color: #e6e6e6;
+      border-radius: 5px;
+    }
+    button.submit-btn {
+      margin-top: 15px;
+      background: #00ffcc;
+      color: #000;
+      border: none;
+      padding: 12px;
+      font-weight: bold;
+      cursor: pointer;
+      width: 100%;
+      border-radius: 5px;
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <img src="profile.jpg" alt="Profile Picture">
+  <h1 class="glitch">Cybersecurity & Web Application Security Enthusiast</h1>
+  <p>Protecting systems • Securing web applications • Continuous learning</p>
+</header>
+
+<section>
+  <h2>About Me</h2>
+  <p>
+    I am a cybersecurity and web application security enthusiast with a passion for building and securing modern web systems.
+    I focus on hands-on labs, secure coding practices, and understanding both offensive and defensive security techniques.
+  </p>
+</section>
+
+<section>
+  <h2>Certificates</h2>
+  <ul>
+    <li>Microsoft Certified: Azure Security Engineer Associate</li>
+    <li>TryHackMe Learning Paths</li>
+    <li>Cisco Network Defense, Cyber Threat Management & Endpoint Security Certificates</li>
+  </ul>
+</section>
+
+<section>
+  <h2>Skills</h2>
+  <ul>
+    <li>Web Application Security</li>
+    <li>Networking Fundamentals</li>
+    <li>HTML, CSS, JavaScript</li>
+    <li>Linux & Windows Security</li>
+    <li>Vulnerability Assessment</li>
+  </ul>
+</section>
+
+<section class="links">
+  <h2>Links</h2>
+  <a href="https://github.com/ZwaneKayy" target="_blank" rel="noopener noreferrer">GitHub</a>
+  <a href="https://tryhackme.com/p/zwanekhanyisilek" target="_blank" rel="noopener noreferrer">TryHackMe</a>
+</section>
+
+<section>
+  <h2>Security Practices Used on This Site</h2>
+  <ul>
+    <li>HTTPS enforced via GitHub Pages</li>
+    <li>Content Security Policy (CSP) to mitigate XSS attacks</li>
+    <li>X-Frame-Options to prevent clickjacking</li>
+    <li>X-Content-Type-Options to prevent MIME sniffing</li>
+    <li>Referrer Policy to reduce information leakage</li>
+    <li>Secure external links using rel="noopener noreferrer"</li>
+    <li>Minimal JavaScript surface to reduce attack vectors</li>
+    <li>No public phone number to prevent OSINT abuse</li>
+    <li>Secure contact form using Formspree over HTTPS</li>
+  </ul>
+</section>
+
+<section>
+  <h2>Contact Me</h2>
+  <p>You can reach me securely using the form below.</p>
+  <form action="https://formspree.io/f/xlgdqdro" method="POST">
+    <input type="text" name="name" placeholder="Your Name" required>
+    <input type="email" name="email" placeholder="Your Email" required>
+    <textarea name="message" rows="5" placeholder="Your Message" required></textarea>
+    <button type="submit" class="submit-btn">Send Message</button>
+  </form>
+</section>
+
+<footer>
+  <p>© 2026 Khanyisile Katlego Zwane | Cybersecurity Portfolio</p>
+</footer>
+
+<audio id="bg-music" loop>
+  <source src="music.mp3.mp3" type="audio/mpeg">
+</audio>
+<button class="music-btn" onclick="toggleMusic()">🎧 Music</button>
+
+<script>
+  const music = document.getElementById('bg-music');
+  let playing = false;
+
+  function toggleMusic() {
+    if (!playing) {
+      music.play();
+      playing = true;
+    } else {
+      music.pause();
+      playing = false;
+    }
+  }
+</script>
+
+</body>
+</html>
